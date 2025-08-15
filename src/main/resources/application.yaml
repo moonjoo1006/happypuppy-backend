@@ -1,0 +1,34 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:admin@cluster0.1agla.mongodb.net/forum?retryWrites=true&w=majority
+    redis:
+      host: localhost
+      port: 6379
+  #      database: forum
+#      username: admin
+#      password: admin
+#      host: cluster0.1agla.mongodb.net
+  datasource:
+#    url: jdbc:mysql://localhost:3306/pet?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    url: jdbc:mysql://mysql8:3306/pet?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: happy
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # 개발용 - production에서는 validate 또는 none 권장
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+
+kakao:
+  client-id: ${KAKAO_CLIENT_ID:2d0a9beaac0fccc5ae45fde1a99a0e92}
+  client-secret: ${KAKAO_CLIENT_SECRET:1YgIK18xY4SM3sLIs6VL9Sf6cyrIDbvb}
+  redirect-uri: http://localhost:8080/redirect
+  kauth-host: https://kauth.kakao.com
+  kapi-host: https://kapi.kakao.com

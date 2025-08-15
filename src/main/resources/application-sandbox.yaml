@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:admin@cluster0.1agla.mongodb.net/forum?retryWrites=true&w=majority
+    redis:
+      host: redis
+      port: 6379
+  datasource:
+    url: jdbc:mysql://mysql8:3306/pet?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: happy
+    driver-class-name: com.mysql.cj.jdbc.Driver
