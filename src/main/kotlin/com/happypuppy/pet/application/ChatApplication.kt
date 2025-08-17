@@ -35,8 +35,9 @@ class ChatApplication(
         val chatIds = chatMembers.map { it.chatId }
         val chats = chatService.findByIdIn(chatIds)
 
-        val oneWeekAgo = LocalDateTime.now().minusWeeks(1)
-        return chats.filter { it.meetAt.isAfter(oneWeekAgo) }
+        val firstDayOfMonth = LocalDateTime.now().withDayOfMonth(1)
+            .withHour(0).withMinute(0).withSecond(0).withNano(0)
+        return chats.filter { it.meetAt.isAfter(firstDayOfMonth) }
             .map { it.toResponse() }
     }
 

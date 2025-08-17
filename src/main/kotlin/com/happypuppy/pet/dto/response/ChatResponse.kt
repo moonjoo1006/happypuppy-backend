@@ -13,6 +13,9 @@ data class ChatResponse(
     val meetDate: LocalDate,
     val meetTime: LocalTime,
     val meetAt: LocalDateTime,
+    val imageUrl: String?,
+    val introduce: String?,
+    val tags: List<String>?
 )
 
 fun ChatEntity.toResponse() = ChatResponse(
@@ -21,5 +24,8 @@ fun ChatEntity.toResponse() = ChatResponse(
     name = this.name,
     meetDate = this.meetAt.toLocalDate(),
     meetTime = this.meetAt.toLocalTime(),
-    meetAt = this.meetAt
+    meetAt = this.meetAt,
+    imageUrl = this.imageUrl,
+    introduce = this.introduce,
+    tags = this.tags?.split(",")
 )

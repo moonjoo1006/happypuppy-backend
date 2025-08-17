@@ -135,7 +135,6 @@ class CreateMockController(
                 status = ChatStatus.ON,
                 name = "테스트 채팅방1",
                 owner = 1,
-                occupy = 10,
                 meetAt = LocalDateTime.now().plusDays(3),
             ),
             ChatEntity(
@@ -143,7 +142,6 @@ class CreateMockController(
                 status = ChatStatus.ON,
                 name = "테스트 채팅방2",
                 owner = 1,
-                occupy = 10,
                 meetAt = LocalDateTime.now().plusDays(7),
             ),
             ChatEntity(
@@ -151,7 +149,6 @@ class CreateMockController(
                 status = ChatStatus.ON,
                 name = "테스트 채팅방3",
                 owner = 1,
-                occupy = 10,
                 meetAt = LocalDateTime.now().plusDays(5),
             ),
             ChatEntity(
@@ -159,7 +156,6 @@ class CreateMockController(
                 status = ChatStatus.ON,
                 name = "테스트 채팅방4",
                 owner = 1,
-                occupy = 10,
                 meetAt = LocalDateTime.now().minusWeeks(1),
             ),
             ChatEntity(
@@ -167,7 +163,6 @@ class CreateMockController(
                 status = ChatStatus.ON,
                 name = "테스트 채팅방5",
                 owner = 1,
-                occupy = 10,
                 meetAt = LocalDateTime.now().plusDays(10),
             ),
             ChatEntity(
@@ -175,7 +170,6 @@ class CreateMockController(
                 status = ChatStatus.ON,
                 name = "테스트 채팅방6",
                 owner = 1,
-                occupy = 10,
                 meetAt = LocalDateTime.now().minusWeeks(2),
             )
         )

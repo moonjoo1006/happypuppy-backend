@@ -26,9 +26,13 @@ data class ChatEntity(
 
     val owner: Long,
 
-    val occupy: Int,
-
     val meetAt: LocalDateTime,
+
+    val imageUrl: String? = null,
+
+    val introduce: String? = null,
+
+    val tags: String? = null,
 
     val createdAt: LocalDateTime? = null,
 

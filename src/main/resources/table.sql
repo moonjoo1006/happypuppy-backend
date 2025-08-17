@@ -40,12 +40,14 @@ CREATE TABLE place
 CREATE TABLE chat
 (
     id         BIGINT AUTO_INCREMENT PRIMARY KEY,
-    place_id   BIGINT      NOT NULL comment '장소 아이디',
-    status     VARCHAR(16) NOT NULL COMMENT '채팅방 상태',
-    name       VARCHAR(32) NOT NULL COMMENT '채팅방 이름',
-    occupy     INT         NOT NULL COMMENT '최대 인원',
-    owner      BIGINT      NOT NULL COMMENT '방장 아이디',
-    meet_at    TIMESTAMP   NOT NULL COMMENT '약속일',
+    place_id   BIGINT       NOT NULL comment '장소 아이디',
+    status     VARCHAR(16)  NOT NULL COMMENT '채팅방 상태',
+    name       VARCHAR(32)  NOT NULL COMMENT '채팅방 이름',
+    owner      BIGINT       NOT NULL COMMENT '방장 아이디',
+    meet_at    TIMESTAMP    NOT NULL COMMENT '약속일',
+    image_url  VARCHAR(255) NULL COMMENT '채팅방 이미지 URL',
+    introduce  VARCHAR(255) NULL COMMENT '채팅방 소개',
+    tags       VARCHAR(128) NULL COMMENT '채팅방 태그',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '생성일',
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '수정일'
 ) ENGINE = InnoDB

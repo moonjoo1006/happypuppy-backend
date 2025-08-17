@@ -24,4 +24,6 @@ data class UpdateUserRequest(
     val ageType: AgeType?,
     val address: AddressType,    //enum type로 정의, 쿠폰에 있는 지역
     val introduce: String,  //
+    val phoneNumber: String?,
+    val showPhoneNumber: Boolean?,
 )

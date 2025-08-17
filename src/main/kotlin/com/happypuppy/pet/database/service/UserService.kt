@@ -42,6 +42,8 @@ class UserService(val userRepository: UserRepository) {
                 ageType = request.ageType,
                 address = request.address,
                 introduce = request.introduce,
+                phoneNumber = request.phoneNumber,
+                showPhoneNumber = request.showPhoneNumber,
                 updatedAt = LocalDateTime.now()
             )
             userRepository.save(copyUser).toUserResponse()
